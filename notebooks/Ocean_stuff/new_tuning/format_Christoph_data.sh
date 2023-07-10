@@ -9,8 +9,8 @@ homepath=/bettik/burgardc
 
 #### name of NEMO run
 #nemo_run=ctrl94
-nemo_run=isf94
-#nemo_run=isfru94
+#nemo_run=isf94
+nemo_run=isfru94
 
 ################# DECLARE THE PATHS ##############################
 path1=$homepath/DATA/SUMMER_PAPER/raw/CHRISTOPH_DATA
@@ -44,10 +44,10 @@ cdo sellonlatbox,0,360,-90,-50 $path2/variables_of_interest-"$nemo_run"_"$yy".nc
 done
 cdo sellonlatbox,0,360,-90,-50 -selgrid,1 $path2/domain_cfg_eANT025.L121_setgrid.nc $path3/mask_variables_of_interest_Ant.nc
 
-cdo gtc,0 -selvar,so $path3/variables_of_interest_2015_Ant.nc $path2/mask_ocean.nc
+cdo gtc,0 -selvar,bathy_metry $path3/mask_variables_of_interest_Ant.nc $path2/mask_ocean.nc
 cdo subc,1 $path2/mask_ocean.nc $path3/lsmask_-1-0_Ant_withmiss.nc
 cdo ifthenc,2 $path3/lsmask_-1-0_Ant_withmiss.nc $path3/lsmask_0-2_Ant_withmiss.nc  
-cdo setmisstoc,0 $path3/lsmask_0-2_Ant_withmiss.nc $path3/lsmask_0-2_Ant.nc 
+cdo setmisstoc,0 -seltimestep,1 $path3/lsmask_0-2_Ant_withmiss.nc $path3/lsmask_0-2_Ant.nc 
 
 cdo ifthenc,1 -selvar,isf_draft $path3/mask_variables_of_interest_Ant.nc $path3/isfmask_1_Ant_withmiss.nc 
 cdo setmisstoc,0 $path3/isfmask_1_Ant_withmiss.nc $path3/isfmask_1_Ant.nc 
