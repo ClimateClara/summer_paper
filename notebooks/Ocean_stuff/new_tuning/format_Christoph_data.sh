@@ -8,9 +8,9 @@
 homepath=/bettik/burgardc
 
 #### name of NEMO run
-nemo_run=ctrl94
+#nemo_run=ctrl94
 #nemo_run=isf94
-#nemo_run=isfru94
+nemo_run=isfru94
 
 ################# DECLARE THE PATHS ##############################
 path1=$homepath/DATA/SUMMER_PAPER/raw/CHRISTOPH_DATA
@@ -19,20 +19,28 @@ path3=$homepath/DATA/SUMMER_PAPER/interim/NEMO_"$nemo_run"_ANT_STEREO
 path5=$homepath/DATA/SUMMER_PAPER/raw
 ###################################################################
 
-cdo setgrid,$path1/var_grid_wo_nans.txt $path1/fwfisf-eANT025.L121-"$nemo_run"-1y_1982-2013.nc $path2/fwfisf-eANT025.L121-"$nemo_run"-1y_setgrid.nc
-cdo setgrid,$path1/var_grid_wo_nans.txt $path1/thetao-eANT025.L121-"$nemo_run"-1y_1982-2013.nc $path2/thetao-eANT025.L121-"$nemo_run"-1y_setgrid.nc
-cdo setgrid,$path1/var_grid_wo_nans.txt $path1/so-eANT025.L121-"$nemo_run"-1y_1982-2013.nc $path2/so-eANT025.L121-"$nemo_run"-1y_setgrid.nc
+#cdo setgrid,$path1/var_grid_wo_nans.txt $path1/fwfisf-eANT025.L121-"$nemo_run"-1y_1982-2013.nc $path2/fwfisf-eANT025.L121-"$nemo_run"-1y_setgrid.nc
+#cdo setgrid,$path1/var_grid_wo_nans.txt $path1/thetao-eANT025.L121-"$nemo_run"-1y_1982-2013.nc $path2/thetao-eANT025.L121-"$nemo_run"-1y_setgrid.nc
+#cdo setgrid,$path1/var_grid_wo_nans.txt $path1/so-eANT025.L121-"$nemo_run"-1y_1982-2013.nc $path2/so-eANT025.L121-"$nemo_run"-1y_setgrid.nc
+
+cdo setgrid,$path1/var_grid_wo_nans.txt $path1/fwfisf-eANT025.L121-"$nemo_run"-1y_2014-2100.nc $path2/fwfisf-eANT025.L121-"$nemo_run"-1y_setgrid.nc
+cdo setgrid,$path1/var_grid_wo_nans.txt $path1/thetao-eANT025.L121-"$nemo_run"-1y_2014-2100.nc $path2/thetao-eANT025.L121-"$nemo_run"-1y_setgrid.nc
+cdo setgrid,$path1/var_grid_wo_nans.txt $path1/so-eANT025.L121-"$nemo_run"-1y_2014-2100.nc $path2/so-eANT025.L121-"$nemo_run"-1y_setgrid.nc
 
 cdo splityear $path2/fwfisf-eANT025.L121-"$nemo_run"-1y_setgrid.nc $path2/fwfisf-eANT025.L121-"$nemo_run"_
 cdo splityear $path2/thetao-eANT025.L121-"$nemo_run"-1y_setgrid.nc $path2/thetao-eANT025.L121-"$nemo_run"_
 cdo splityear $path2/so-eANT025.L121-"$nemo_run"-1y_setgrid.nc $path2/so-eANT025.L121-"$nemo_run"_
 
+
+
+
+
 #cdo splityear $path1/fwfisf-eANT025.L121-"$nemo_run"-1y_2014-2100.nc $path2/fwfisf-eANT025.L121-"$nemo_run"_
 #cdo splityear $path1/thetao-eANT025.L121-"$nemo_run"-1y_2014-2100.nc $path2/thetao-eANT025.L121-"$nemo_run"_
 #cdo splityear $path1/so-eANT025.L121-"$nemo_run"-1y_2014-2100.nc $path2/so-eANT025.L121-"$nemo_run"_
 
-for yy in {1982..2013}
-#for yy in {2014..2100}
+#for yy in {1982..2013}
+for yy in {2014..2100}
 do 
 echo $yy
 \rm $path2/variables_of_interest-"$nemo_run"_"$yy".nc
@@ -52,7 +60,14 @@ do
 done
 
 cdo merge $path2/mask_nav_lon.nc $path2/mask_nav_lat.nc $path2/tmask_sum.nc $path2/tmask_3d.nc $path2/mask_isf_draft.nc $path2/mask_bathy_metry.nc $path2/mask_e3w_0.nc  $path2/mask_variables_of_interest.nc
-# used python: mask_file.squeeze().drop('time_counter')  mfile_wo_time.to_netcdf('mask_variables_of_interest_wotime.nc')
+
+#####
+# ipython
+# import xarray as xr
+# cd /bettik/burgardc/DATA/SUMMER_PAPER/interim/CHRISTOPH_ #isf94
+# mask_file = xr.open_dataset('mask_variables_of_interest.nc')
+# mfile_wo_time = mask_file.squeeze().drop('time_counter')  
+# mfile_wo_time.to_netcdf('mask_variables_of_interest_wotime.nc')
 
 cdo setgrid,$path1/var_grid_wo_nans.txt $path2/mask_variables_of_interest_wotime.nc $path2/mask_variables_of_interest_setgrid.nc 
 #$path1/eANT025.L121_grid_T_cdo.nc
@@ -73,8 +88,8 @@ cdo mulc,1.0 $path3/lsmask_0-1-2_Ant_nonfloat.nc $path3/lsmask_0-1-2_Ant.nc
 
 #cdo gtc,0 -selvar,tmask_2 $path3/mask_variables_of_interest_Ant.nc $path3/lsmask_0-1_3d_Ant.nc
 
-for yy in {1982..2013}
-#for yy in {2014..2100}
+#for yy in {1982..2013}
+for yy in {2014..2100}
 do 
 echo $yy
 cdo  sellonlatbox,0,360,-90,-50 $path2/variables_of_interest-"$nemo_run"_"$yy".nc $path3/variables_of_interest_"$yy"_Ant_wolandmask.nc
