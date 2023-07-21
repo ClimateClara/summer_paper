@@ -27,19 +27,34 @@ def normalise_vars(var, mean, std):
     return var_norm
 
 def read_input_evalmetrics_NN(nemo_run):
-    inputpath_boxes = '/bettik/burgardc/DATA/BASAL_MELT_PARAM/interim/BOXES/nemo_5km_'+nemo_run+'/'
-    inputpath_data='/bettik/burgardc/DATA/BASAL_MELT_PARAM/interim/NEMO_eORCA025.L121_'+nemo_run+'_ANT_STEREO/'
-    inputpath_mask = '/bettik/burgardc/SCRIPTS/basal_melt_param/data/interim/ANTARCTICA_IS_MASKS/nemo_5km_'+nemo_run+'/'
-
-    file_isf_orig = xr.open_dataset(inputpath_mask+'nemo_5km_isf_masks_and_info_and_distance_new_oneFRIS.nc')
+    if nemo_run in ['ctrl94','isf94','isfru94']:
+        inputpath_boxes = '/bettik/burgardc/DATA/SUMMER_PAPER/interim/BOXES/nemo_5km_'+nemo_run+'/'
+        inputpath_data='/bettik/burgardc/DATA/SUMMER_PAPER/interim/NEMO_'+nemo_run+'_ANT_STEREO/'
+        inputpath_mask='/bettik/burgardc/DATA/SUMMER_PAPER/interim/ANTARCTICA_IS_MASKS/nemo_5km_'+nemo_run+'/'
+    else:
+        inputpath_boxes = '/bettik/burgardc/DATA/BASAL_MELT_PARAM/interim/BOXES/nemo_5km_'+nemo_run+'/'
+        inputpath_data='/bettik/burgardc/DATA/BASAL_MELT_PARAM/interim/NEMO_eORCA025.L121_'+nemo_run+'_ANT_STEREO/'
+        inputpath_mask='/bettik/burgardc/DATA/BASAL_MELT_PARAM/interim/ANTARCTICA_IS_MASKS/nemo_5km_'+nemo_run+'/'
+    
+    if nemo_run in ['ctrl94','isf94','isfru94']:
+        file_isf_orig = xr.open_dataset(inputpath_mask+'nemo_5km_isf_masks_and_info_and_distance_oneFRIS.nc')
+    else:
+        file_isf_orig = xr.open_dataset(inputpath_mask+'nemo_5km_isf_masks_and_info_and_distance_new_oneFRIS.nc')
     nonnan_Nisf = file_isf_orig['Nisf'].where(np.isfinite(file_isf_orig['front_bot_depth_max']), drop=True).astype(int)
     file_isf_nonnan = file_isf_orig.sel(Nisf=nonnan_Nisf)
     large_isf = file_isf_nonnan['Nisf'].where(file_isf_nonnan['isf_area_here'] >= 2500, drop=True)
     file_isf = file_isf_nonnan.sel(Nisf=large_isf)
+    if 'labels' in file_isf.coords.keys():
+        file_isf = file_isf.drop('labels')
+    
     
     map_lim = [-3000000,3000000]
+    file_mask_orig = xr.open_dataset(inputpath_data+'other_mask_vars_Ant_stereo.nc')
+    file_mask_orig_cut = dfmt.cut_domain_stereo(file_mask_orig, map_lim, map_lim)
+
     file_other = xr.open_dataset(inputpath_data+'corrected_draft_bathy_isf.nc')#, chunks={'x': chunk_size, 'y': chunk_size})
     file_other_cut = dfmt.cut_domain_stereo(file_other, map_lim, map_lim)
+
     file_conc = xr.open_dataset(inputpath_data+'isfdraft_conc_Ant_stereo.nc')
     file_conc_cut = dfmt.cut_domain_stereo(file_conc, map_lim, map_lim)
     
@@ -79,7 +94,7 @@ def apply_NN_results_2D_1isf_1tblock(file_isf, norm_metrics, df_nrun, model, inp
     x_val_norm = val_norm[input_vars]
     y_val_norm = val_norm['melt_m_ice_per_y']
 
-    y_out_norm = model.predict(x_val_norm.values,verbose = 0)
+    y_out_norm = model.predict(x_val_norm.values.astype('float64'),verbose = 0)
 
     y_out_norm_xr = xr.DataArray(data=y_out_norm.squeeze()).rename({'dim_0': 'index'})
     y_out_norm_xr = y_out_norm_xr.assign_coords({'index': x_val_norm.index})
