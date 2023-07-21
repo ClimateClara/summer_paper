@@ -25,7 +25,7 @@ EOF
 
 chmod +x $path_jobscripts/${mod_size}_${TS_opt}_${norm_method}_wholedataset_${exp_name}_${seed_nb}.sh
 
-oarsub -S -n ${mod_size}_${TS_opt}_${norm_method}_wholedataset_${exp_name}_${seed_nb} --stdout $path_jobid/${mod_size}_${TS_opt}_${norm_method}_wholedataset_${exp_name}_${seed_nb}.o%jobid%  --stderr $path_jobid/${mod_size}_${TS_opt}_${norm_method}_wholedataset_${exp_name}_${seed_nb}.e%jobid% -l nodes=1/core=4,walltime=06:00:00 --project mais -p "network_address='luke62'" $path_jobscripts/${mod_size}_${TS_opt}_${norm_method}_wholedataset_${exp_name}_${seed_nb}.sh
+oarsub -S -n ${mod_size}_${TS_opt}_${norm_method}_wholedataset_${exp_name}_${seed_nb} --stdout $path_jobid/${mod_size}_${TS_opt}_${norm_method}_wholedataset_${exp_name}_${seed_nb}.o%jobid%  --stderr $path_jobid/${mod_size}_${TS_opt}_${norm_method}_wholedataset_${exp_name}_${seed_nb}.e%jobid% -l nodes=1/core=4,walltime=10:00:00 --project mais -p "network_address='luke62'" $path_jobscripts/${mod_size}_${TS_opt}_${norm_method}_wholedataset_${exp_name}_${seed_nb}.sh
 
 # to remove if no CV!!!
 
