@@ -21,7 +21,7 @@ EOF
 
 chmod +x $path_jobscripts/${mod}_${scenario}_TSprof.sh
 
-oarsub -S -n ${mod}_${scenario}_TSprof --stdout $path_jobid/${mod}_${scenario}_TSprof.o%jobid%  --stderr $path_jobid/${mod}_${scenario}_TSprof.e%jobid% -l nodes=1/core=4,walltime=05:00:00 --project mais -p "network_address='luke62'" $path_jobscripts/${mod}_${scenario}_TSprof.sh
+oarsub -S -n ${mod}_${scenario}_TSprof --stdout $path_jobid/${mod}_${scenario}_TSprof.o%jobid%  --stderr $path_jobid/${mod}_${scenario}_TSprof.e%jobid% -l nodes=1/core=6,walltime=05:00:00 --project mais -p "network_address='luke62'" $path_jobscripts/${mod}_${scenario}_TSprof.sh
 
 # to remove if no CV!!!
 

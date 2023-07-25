@@ -7,6 +7,7 @@ import xarray as xr
 import numpy as np
 import sys
 import glob
+import distributed
 
 mod = str(sys.argv[1])
 scenario = str(sys.argv[2])
