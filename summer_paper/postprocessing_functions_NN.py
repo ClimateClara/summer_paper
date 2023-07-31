@@ -115,6 +115,40 @@ def apply_NN_results_2D_1isf_1tblock(file_isf, norm_metrics, df_nrun, model, inp
     y_whole_grid = y_to_compare.reindex_like(file_isf['ISF_mask'])
     return y_whole_grid
 
+def apply_NN_results_2D_1isf_1year(file_isf, norm_metrics, df_nrun, model, input_vars=[]):
+    """
+    Compute 2D melt based on a given NN model
+    
+    """
+
+    val_norm = normalise_vars(df_nrun,
+                                norm_metrics.loc['mean_vars'],
+                                norm_metrics.loc['range_vars'])
+
+    x_val_norm = val_norm[input_vars]
+    y_val_norm = val_norm['melt_m_ice_per_y']
+
+    y_out_norm = model.predict(x_val_norm.values.astype('float64'),verbose = 0)
+
+    y_out_norm_xr = xr.DataArray(data=y_out_norm.squeeze()).rename({'dim_0': 'index'})
+    y_out_norm_xr = y_out_norm_xr.assign_coords({'index': x_val_norm.index})
+
+    # denormalise the output
+    y_out = denormalise_vars(y_out_norm_xr, 
+                             norm_metrics['melt_m_ice_per_y'].loc['mean_vars'],
+                             norm_metrics['melt_m_ice_per_y'].loc['range_vars'])
+
+    y_out_pd_s = pd.Series(y_out.values,index=df_nrun.index,name='predicted_melt') 
+    y_target_pd_s = pd.Series(df_nrun['melt_m_ice_per_y'].values,index=df_nrun.index,name='reference_melt') 
+
+    # put some order in the file
+    y_out_xr = y_out_pd_s.to_xarray()
+    y_target_xr = y_target_pd_s.to_xarray()
+    y_to_compare = xr.merge([y_out_xr, y_target_xr]).sortby('y')
+
+    y_whole_grid = y_to_compare.reindex_like(file_isf['ISF_mask'])
+    return y_whole_grid
+
     
 def evalmetrics_1D_NN(kisf, norm_metrics, df_nrun, model, file_isf, geometry_info_2D, box_charac_2D, box_charac_1D, isf_stack_mask, input_vars=[], ensemble_mean=False):
     
