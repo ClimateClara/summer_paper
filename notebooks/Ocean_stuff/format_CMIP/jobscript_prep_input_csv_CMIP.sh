@@ -3,7 +3,7 @@
 ## RUN PREPARATION OF T AND S PROFILES
 
 mod=CNRM-CM6-1
-scenario=historical
+scenario=ssp585
 to2300=False
 
 path_jobscripts=/bettik/burgardc/SCRIPTS/summer_paper/jobscripts/JOB_SCRIPTS/

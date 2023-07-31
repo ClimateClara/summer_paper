@@ -53,7 +53,7 @@ file_isf_conc = BedMachine_orig_cut['isf_conc']
 # ice and bed slopes
 file_slope = xr.open_dataset(inputpath_mask+'BedMachine_4km_slope_info_bedrock_draft_latlon_oneFRIS.nc')
 
-for tt in tqdm(range(yystart,yyend+1)): #yyend+1)): #continue at 2070
+for tt in range(yystart,yyend+1): #yyend+1)): #continue at 2070
     print(tt)
     
     # T and S extrapolated to ice draft depth
