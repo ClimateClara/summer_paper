@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/bettik/burgardc/SCRIPTS/summer_paper/notebooks/Ocean_stuff/format_CMIP//prepare_TS_prof_asjob.py", line 27, in <module>
+    T_ocean_files = xr.open_mfdataset(inputpath_data_orig+'thetao_Oyr_'+mod+'_'+scenario+'_'+ens_run+'_*.nc', chunks={'x': 400, 'y': 400, 'depth': 50, 'time': 5}, parallel=True)
+NameError: name 'ens_run' is not defined

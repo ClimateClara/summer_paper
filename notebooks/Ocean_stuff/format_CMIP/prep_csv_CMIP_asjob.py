@@ -12,7 +12,7 @@ scenario = str(sys.argv[2])
 to2300 = bool(sys.argv[3])
 
 if scenario == 'historical':
-    yystart = 1850
+    yystart = 1873
     yyend = 2014
 else:
     if to2300:

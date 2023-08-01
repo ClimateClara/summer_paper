@@ -3,7 +3,7 @@
 ## RUN PREPARATION OF T AND S PROFILES
 
 mod=CNRM-CM6-1
-scenario=ssp585
+scenario=historical
 to2300=False
 
 path_jobscripts=/bettik/burgardc/SCRIPTS/summer_paper/jobscripts/JOB_SCRIPTS/
@@ -22,7 +22,7 @@ EOF
 
 chmod +x $path_jobscripts/${mod}_${scenario}_prepcsvinput.sh
 
-oarsub -S -n ${mod}_${scenario}_prepcsvinput --stdout $path_jobid/${mod}_${scenario}_prepcsvinput.o%jobid%  --stderr $path_jobid/${mod}_${scenario}_prepcsvinput.e%jobid% -l nodes=1/core=3,walltime=08:00:00 --project mais -p "network_address='luke62'" $path_jobscripts/${mod}_${scenario}_prepcsvinput.sh
+oarsub -S -n ${mod}_${scenario}_prepcsvinput --stdout $path_jobid/${mod}_${scenario}_prepcsvinput.o%jobid%  --stderr $path_jobid/${mod}_${scenario}_prepcsvinput.e%jobid% -l nodes=1/core=5,walltime=08:00:00 --project mais -p "network_address='luke60'" $path_jobscripts/${mod}_${scenario}_prepcsvinput.sh
 
 # to remove if no CV!!!
 

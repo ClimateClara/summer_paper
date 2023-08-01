@@ -1,0 +1,1392 @@
+/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/node.py:182: UserWarning: Port 8787 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 34691 instead
+  warnings.warn(
+/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/node.py:182: UserWarning: Port 8787 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 41933 instead
+  warnings.warn(
+/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/node.py:182: UserWarning: Port 8787 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 40329 instead
+  warnings.warn(
+/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/node.py:182: UserWarning: Port 8787 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 37407 instead
+  warnings.warn(
+/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/node.py:182: UserWarning: Port 8787 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 39631 instead
+  warnings.warn(
+2023-07-24 18:42:38,129 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,128 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,136 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,136 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,136 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,136 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,136 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,137 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,137 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/node.py:182: UserWarning: Port 8787 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 45297 instead
+  warnings.warn(
+2023-07-24 18:42:38,133 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,139 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,140 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,140 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,140 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,140 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,141 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,161 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,153 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,142 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:39,586 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:39,586 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:39,586 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:40,199 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:40,199 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:38,138 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:40,683 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:40,684 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:40,683 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:40,683 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:41,172 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:41,171 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:41,171 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:41,647 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:41,647 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:41,648 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+2023-07-24 18:42:42,136 - distributed.nanny - ERROR - Failed to start process
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 432, in instantiate
+    result = await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/nanny.py", line 720, in start
+    await self.process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 55, in _call_and_set_future
+    res = func(*args, **kwargs)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/site-packages/distributed/process.py", line 215, in _start
+    process.start()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/burgardc/miniconda3/envs/py38/lib/python3.8/multiprocessing/spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.

@@ -1,0 +1,120 @@
+2015
+2016
+2017
+2018
+2019
+2020
+2021
+2022
+2023
+2024
+2025
+2026
+2027
+2028
+2029
+2030
+2031
+2032
+2033
+2034
+2035
+2036
+2037
+2038
+2039
+2040
+2041
+2042
+2043
+2044
+2045
+2046
+2047
+2048
+2049
+2050
+2051
+2052
+2053
+2054
+2055
+2056
+2057
+2058
+2059
+2060
+2061
+2062
+2063
+2064
+2065
+2066
+2067
+2068
+2069
+2070
+2071
+2072
+2073
+2074
+2075
+2076
+2077
+2078
+2079
+2080
+2081
+2082
+2083
+2084
+2085
+2086
+2087
+2088
+2089
+2090
+2091
+2092
+2093
+2094
+2095
+2096
+2097
+2098
+2099
+2100
+2101
+Traceback (most recent call last):
+  File "/home/burgardc/miniconda3/envs/neuralnet/lib/python3.9/site-packages/xarray/backends/file_manager.py", line 210, in _acquire_with_cache_info
+    file = self._cache[self._key]
+  File "/home/burgardc/miniconda3/envs/neuralnet/lib/python3.9/site-packages/xarray/backends/lru_cache.py", line 56, in __getitem__
+    value = self._cache[key]
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('/bettik/burgardc/DATA/SUMMER_PAPER/interim/T_S_PROF/CMIP/CNRM-CM6-1/T_S_2D_fields_isf_draft_CNRM-CM6-1_ssp585_2101.nc',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), '7e440ee2-a344-411a-a50e-b1e6be942603']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/bettik/burgardc/SCRIPTS/summer_paper/notebooks/Ocean_stuff/format_CMIP//prep_csv_CMIP_asjob.py", line 60, in <module>
+    T_S_2D_isfdraft = xr.open_dataset(inputpath_profiles+'T_S_2D_fields_isf_draft_'+mod+'_'+scenario+'_'+str(tt)+'.nc').squeeze().drop('time')
+  File "/home/burgardc/miniconda3/envs/neuralnet/lib/python3.9/site-packages/xarray/backends/api.py", line 526, in open_dataset
+    backend_ds = backend.open_dataset(
+  File "/home/burgardc/miniconda3/envs/neuralnet/lib/python3.9/site-packages/xarray/backends/netCDF4_.py", line 577, in open_dataset
+    store = NetCDF4DataStore.open(
+  File "/home/burgardc/miniconda3/envs/neuralnet/lib/python3.9/site-packages/xarray/backends/netCDF4_.py", line 382, in open
+    return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)
+  File "/home/burgardc/miniconda3/envs/neuralnet/lib/python3.9/site-packages/xarray/backends/netCDF4_.py", line 329, in __init__
+    self.format = self.ds.data_model
+  File "/home/burgardc/miniconda3/envs/neuralnet/lib/python3.9/site-packages/xarray/backends/netCDF4_.py", line 391, in ds
+    return self._acquire()
+  File "/home/burgardc/miniconda3/envs/neuralnet/lib/python3.9/site-packages/xarray/backends/netCDF4_.py", line 385, in _acquire
+    with self._manager.acquire_context(needs_lock) as root:
+  File "/home/burgardc/miniconda3/envs/neuralnet/lib/python3.9/contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "/home/burgardc/miniconda3/envs/neuralnet/lib/python3.9/site-packages/xarray/backends/file_manager.py", line 198, in acquire_context
+    file, cached = self._acquire_with_cache_info(needs_lock)
+  File "/home/burgardc/miniconda3/envs/neuralnet/lib/python3.9/site-packages/xarray/backends/file_manager.py", line 216, in _acquire_with_cache_info
+    file = self._opener(*self._args, **kwargs)
+  File "src/netCDF4/_netCDF4.pyx", line 2449, in netCDF4._netCDF4.Dataset.__init__
+  File "src/netCDF4/_netCDF4.pyx", line 2012, in netCDF4._netCDF4._ensure_nc_success
+FileNotFoundError: [Errno 2] No such file or directory: '/bettik/burgardc/DATA/SUMMER_PAPER/interim/T_S_PROF/CMIP/CNRM-CM6-1/T_S_2D_fields_isf_draft_CNRM-CM6-1_ssp585_2101.nc'
