@@ -1,6 +1,7 @@
 from pyproj import Transformer
 from tqdm.notebook import trange, tqdm
 import xarray as xr
+import numpy as np
 
 # check if x and y are in range
 def in_range(in_xy,txy):
@@ -31,6 +32,16 @@ def cut_domain_stereo(var_to_cut, map_lim_x, map_lim_y):
 def weighted_mean(data, dims, weights):
     weight_sum = weights.sum(dim=dims) # to avoid dividing by zero
     return (data*weights).sum(dim=dims)/weight_sum.where(weight_sum != 0)
+
+def weighted_std(data, dims, weights):
+    weighted_mean0 = weighted_mean(data, dims, weights)
+    weight_sum = weights.sum(dim=dims) # to avoid dividing by zero
+    
+    top = (weights*(data-weighted_mean0)**2).sum(dim=dims)
+    nonzero_weights = weights.where(weights > 0).count()
+    bottom = (nonzero_weights - 1)/nonzero_weights * weight_sum.where(weight_sum != 0)
+    
+    return np.sqrt(top/bottom)
 
 def create_stacked_mask(isfmask_2D, nisf_list, dims_to_stack, new_dim):
     # create stacked indices to select the different ice shelves
