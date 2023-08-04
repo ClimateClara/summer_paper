@@ -14,13 +14,14 @@ import summer_paper.tuning_functions as tf
 
 run_list = ['OPM006','OPM016','OPM018','OPM021','OPM031','ctrl94','isf94','isfru94']  #
 
-#inputpath_chunk_info = '/bettik/burgardc/DATA/BASAL_MELT_PARAM/interim/T_S_PROF/'
-#info_file = pd.read_csv(inputpath_chunk_info+'info_chunks.txt',header=None, index_col=0)
+inputpath_chunk_info = '/bettik/burgardc/DATA/SUMMER_PAPER/interim/'
+info_file = pd.read_csv(inputpath_chunk_info+'info_chunks.txt',header=None, index_col=0)
 
 ##### OPTIONS FROM TERMINAL
 
+isf_opt= 'LARGE'
 
-tuning_approach='all_data'
+tuning_approach=isf_opt
 
 geometry_info_2D, geometry_info_1D, isf_stack_mask, Nisf_all, file_TS_all, target_melt_all, box_1D_all, box_2D_all, idx_ds = tf.load_data_nemo_tuning_summer_paper(run_list)
 geometry_info_2D = geometry_info_2D.assign_coords({'option': ['cavity','lazero','local']})
@@ -43,15 +44,19 @@ for rr in run_list:
     if rr in rrun_list:
         final_run_list.append(rr)
 
-
-random_isf_sample = Nisf_all
-
+if isf_opt == 'ALL':
+    random_isf_sample = Nisf_all
+elif isf_opt == 'SMALL':
+    random_isf_sample = Nisf_all.drop_sel(Nisf=[10,11])
+elif isf_opt == 'LARGE':
+    random_isf_sample = Nisf_all.sel(Nisf=[10,11])
+    
 #####
 
 dom=50    
 
 # always needs to be filled
-option_param = 'box' #box
+option_param = 'plume' #box
 
 # if linear or qaudratic
 if option_param in ['linear','quadratic']:
