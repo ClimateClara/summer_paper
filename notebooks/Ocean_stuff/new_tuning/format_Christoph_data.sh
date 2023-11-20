@@ -17,6 +17,7 @@ path1=$homepath/DATA/SUMMER_PAPER/raw/CHRISTOPH_DATA
 path2=$homepath/DATA/SUMMER_PAPER/interim/CHRISTOPH_"$nemo_run"
 path3=$homepath/DATA/SUMMER_PAPER/interim/NEMO_"$nemo_run"_ANT_STEREO
 path5=$homepath/DATA/SUMMER_PAPER/raw
+path6=/bettik/kittelc/clara/ #isfru
 ###################################################################
 
 #cdo setgrid,$path1/var_grid_wo_nans.txt $path1/fwfisf-eANT025.L121-"$nemo_run"-1y_1982-2013.nc $path2/fwfisf-eANT025.L121-"$nemo_run"-1y_setgrid.nc
@@ -31,9 +32,14 @@ cdo splityear $path2/fwfisf-eANT025.L121-"$nemo_run"-1y_setgrid.nc $path2/fwfisf
 cdo splityear $path2/thetao-eANT025.L121-"$nemo_run"-1y_setgrid.nc $path2/thetao-eANT025.L121-"$nemo_run"_
 cdo splityear $path2/so-eANT025.L121-"$nemo_run"-1y_setgrid.nc $path2/so-eANT025.L121-"$nemo_run"_
 
-
-
-
+# for isfru_v2
+for yy in {2014..2100}
+do
+echo $yy
+cdo setgrid,$path1/var_grid_wo_nans.txt $path6/fwfisf-eANT025.L121-isfru94_v2.1_1y_"$yy".nc $path2/fwfisf-eANT025.L121-"$nemo_run"_"$yy".nc
+cdo setgrid,$path1/var_grid_wo_nans.txt $path6/thetao-eANT025.L121-isfru94_v2.1_1y_"$yy".nc $path2/thetao-eANT025.L121-"$nemo_run"_"$yy".nc
+cdo setgrid,$path1/var_grid_wo_nans.txt $path6/so-eANT025.L121-isfru94_v2.1_1y_"$yy".nc $path2/so-eANT025.L121-"$nemo_run"_"$yy".nc
+done
 
 #cdo splityear $path1/fwfisf-eANT025.L121-"$nemo_run"-1y_2014-2100.nc $path2/fwfisf-eANT025.L121-"$nemo_run"_
 #cdo splityear $path1/thetao-eANT025.L121-"$nemo_run"-1y_2014-2100.nc $path2/thetao-eANT025.L121-"$nemo_run"_
