@@ -2,11 +2,11 @@
 
 ## RUN CROSS VALIDATION JOBS
 
-mod_size=large  #'mini', 'small', 'medium', 'large', 'extra_large'
+mod_size=small  #'mini', 'small', 'medium', 'large', 'extra_large'
 TS_opt=extrap # extrap, whole, thermocline
 norm_method=std # std, interquart, minmax
 exp_name=newbasic2
-seed_nb=1
+seed_nb=10
 
 
 path_jobscripts=/bettik/burgardc/SCRIPTS/summer_paper/jobscripts/JOB_SCRIPTS/

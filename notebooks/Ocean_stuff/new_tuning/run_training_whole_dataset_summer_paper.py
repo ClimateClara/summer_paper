@@ -51,7 +51,7 @@ if exp_name == 'newbasic2':
 inputpath_data = '/bettik/burgardc/DATA/NN_PARAM/interim/INPUT_DATA/'
 outputpath_nn_models = '/bettik/burgardc/DATA/SUMMER_PAPER/interim/NN_MODELS/'
 
-tblock_dim = np.arange(1,17).tolist()+np.arange(21,50).tolist()
+tblock_dim = np.arange(1,14).tolist()+np.arange(21,50).tolist()
 isf_dim = [10,11,12,13,18,22,23,24,25,30,31,33,38,39,40,42,43,44,45,47,48,51,52,53,54,55,58,61,65,66,69,70,71,73,75]
 
 
