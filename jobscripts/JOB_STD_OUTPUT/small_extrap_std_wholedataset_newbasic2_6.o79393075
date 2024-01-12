@@ -1,0 +1,28 @@
+2024-01-12 16:30:05.603991: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-01-12 16:30:32.304721: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-01-12 16:30:32.425821
+Epoch 1/100
+50470/50470 - 186s - loss: 0.2564 - mae: 0.1982 - mse: 0.2564 - val_loss: 0.1984 - val_mae: 0.1785 - val_mse: 0.1984 - lr: 0.0010 - 186s/epoch - 4ms/step
+Epoch 2/100
+50470/50470 - 184s - loss: 0.1895 - mae: 0.1772 - mse: 0.1895 - val_loss: 0.1706 - val_mae: 0.1675 - val_mse: 0.1706 - lr: 0.0010 - 184s/epoch - 4ms/step
+Epoch 3/100
+50470/50470 - 184s - loss: 0.1717 - mae: 0.1701 - mse: 0.1717 - val_loss: 0.1681 - val_mae: 0.1680 - val_mse: 0.1681 - lr: 0.0010 - 184s/epoch - 4ms/step
+Epoch 4/100
+50470/50470 - 183s - loss: 0.1610 - mae: 0.1653 - mse: 0.1610 - val_loss: 0.1498 - val_mae: 0.1595 - val_mse: 0.1498 - lr: 0.0010 - 183s/epoch - 4ms/step
+Epoch 5/100
+50470/50470 - 185s - loss: 0.1541 - mae: 0.1621 - mse: 0.1541 - val_loss: 0.1540 - val_mae: 0.1595 - val_mse: 0.1540 - lr: 0.0010 - 185s/epoch - 4ms/step
+Epoch 6/100
+50470/50470 - 186s - loss: 0.1490 - mae: 0.1603 - mse: 0.1490 - val_loss: 0.1531 - val_mae: 0.1587 - val_mse: 0.1531 - lr: 0.0010 - 186s/epoch - 4ms/step
+Epoch 7/100
+50470/50470 - 184s - loss: 0.1452 - mae: 0.1587 - mse: 0.1452 - val_loss: 0.1377 - val_mae: 0.1547 - val_mse: 0.1377 - lr: 0.0010 - 184s/epoch - 4ms/step
+Epoch 8/100
+50470/50470 - 185s - loss: 0.1424 - mae: 0.1576 - mse: 0.1424 - val_loss: 0.1494 - val_mae: 0.1554 - val_mse: 0.1494 - lr: 0.0010 - 185s/epoch - 4ms/step
+Epoch 9/100
+50470/50470 - 208s - loss: 0.1399 - mae: 0.1567 - mse: 0.1399 - val_loss: 0.1624 - val_mae: 0.1710 - val_mse: 0.1624 - lr: 0.0010 - 208s/epoch - 4ms/step
+Epoch 10/100
+50470/50470 - 184s - loss: 0.1377 - mae: 0.1558 - mse: 0.1377 - val_loss: 0.1317 - val_mae: 0.1533 - val_mse: 0.1317 - lr: 0.0010 - 184s/epoch - 4ms/step
+Epoch 11/100
+50470/50470 - 185s - loss: 0.1358 - mae: 0.1551 - mse: 0.1358 - val_loss: 0.1348 - val_mae: 0.1565 - val_mse: 0.1348 - lr: 0.0010 - 185s/epoch - 4ms/step
+Epoch 12/100
