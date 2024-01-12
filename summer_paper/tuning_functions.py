@@ -439,7 +439,7 @@ def load_data_nemo_tuning(run_list):
         box_1D_list.append(box_charac_all_1D)
 
         inputpath_plumes = '/bettik/burgardc/SCRIPTS/basal_melt_param/data/interim/PLUMES/nemo_5km_'+nemo_run+'/'
-        plume_charac = xr.open_dataset(inputpath_plumes+'nemo_5km_plume_characteristics_oneFRIS.nc')
+        plume_charac = xr.open_dataset(inputpath_plumes+'nemo_5km_plume_characteristics_oneFRIS_corrected.nc')
         plume_list.append(plume_charac)
 
     file_isf_all = xr.concat(file_isf_list, dim='nemo_run')
