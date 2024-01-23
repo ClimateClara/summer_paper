@@ -536,7 +536,7 @@ def load_data_nemo_tuning_CV(run_list, isf_list, tblock_run, tblock_start, tbloc
         box_1D_list.append(box_charac_all_1D)
 
         inputpath_plumes = '/bettik/burgardc/SCRIPTS/basal_melt_param/data/interim/PLUMES/nemo_5km_'+nemo_run+'/'
-        plume_charac = xr.open_dataset(inputpath_plumes+'nemo_5km_plume_characteristics_oneFRIS.nc')
+        plume_charac = xr.open_dataset(inputpath_plumes+'nemo_5km_plume_characteristics_oneFRIS_corrected.nc')
         plume_list.append(plume_charac)
 
     file_isf_all = xr.concat(file_isf_list, dim='nemo_run')
@@ -662,7 +662,7 @@ def load_data_nemo_tuning_summer_paper(run_list):
             inputpath_plumes = '/bettik/burgardc/DATA/SUMMER_PAPER/interim/PLUMES/nemo_5km_'+nemo_run+'/'
         else:
             inputpath_plumes = '/bettik/burgardc/SCRIPTS/basal_melt_param/data/interim/PLUMES/nemo_5km_'+nemo_run+'/'
-        plume_charac = xr.open_dataset(inputpath_plumes+'nemo_5km_plume_characteristics_oneFRIS.nc')
+        plume_charac = xr.open_dataset(inputpath_plumes+'nemo_5km_plume_characteristics_oneFRIS_corrected.nc')
         plume_list.append(plume_charac)
 
     file_isf_all = xr.concat(file_isf_list, dim='nemo_run')
