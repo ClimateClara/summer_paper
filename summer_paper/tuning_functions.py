@@ -663,7 +663,9 @@ def load_data_nemo_tuning_summer_paper(run_list):
         else:
             inputpath_plumes = '/bettik/burgardc/SCRIPTS/basal_melt_param/data/interim/PLUMES/nemo_5km_'+nemo_run+'/'
         plume_charac = xr.open_dataset(inputpath_plumes+'nemo_5km_plume_characteristics_oneFRIS_corrected.nc')
-        plume_list.append(plume_charac)
+        plume_charac_new = xr.open_dataset(inputpath_plumes+'nemo_5km_plume_characteristics_oneFRIS_lazero_comparison.nc')
+        plume_charac_modif = xr.concat([plume_charac.drop_sel(option='lazero'),plume_charac_new.sel(option='new_lazero')], dim='option').assign_coords({'option': ['cavity','local','lazero']})
+        plume_list.append(plume_charac_modif)
 
     file_isf_all = xr.concat(file_isf_list, dim='nemo_run')
     file_isf_all = file_isf_all.assign_coords({'nemo_run': run_list})
