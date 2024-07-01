@@ -2,8 +2,8 @@
 inputpath=/bettik/burgardc/DATA/SUMMER_PAPER/raw/CMIP_DATA/tas_data
 outputpath=/bettik/burgardc/DATA/SUMMER_PAPER/interim/CMIP_TEMP
 
-for mod in {CNRM-CM6-1,CNRM-ESM2-1,GISS_E2-1-H,CESM2-WACCM,CESM2,CanESM5,IPSL-CM6A-LR,MRI-ESM2-0,MPI-ESM1-2-HR,GFDL-CM4,GFDL-ESM4,UKESM1-0-LL} #ACCESS-CM2,ACCESS-ESM1-5} #,
-for mod in {CESM2,MRI-ESM2-0} #ACCESS-CM2,ACCESS-ESM1-5} #,
+for mod in {ACCESS-CM2,ACCESS-ESM1-5,CNRM-CM6-1,CNRM-ESM2-1,GISS_E2-1-H,CESM2-WACCM,CESM2,CanESM5,IPSL-CM6A-LR,MRI-ESM2-0,MPI-ESM1-2-HR,GFDL-CM4,GFDL-ESM4,UKESM1-0-LL} #ACCESS-CM2,ACCESS-ESM1-5} #,
+#for mod in {CESM2,MRI-ESM2-0} #ACCESS-CM2,ACCESS-ESM1-5} #,
 do
 echo $mod
 echo "historical"
@@ -18,3 +18,28 @@ cdo fldmean $outputpath/$mod/tas_Amon_"$mod"_"$scen".nc $outputpath/$mod/tas_Amo
 cdo yearmean $outputpath/$mod/tas_Amon_"$mod"_"$scen"_fldmean.nc $outputpath/$mod/tas_Amon_"$mod"_"$scen"_fldmean_ymean.nc
 done
 done
+
+
+for mod in {ACCESS-CM2,ACCESS-ESM1-5,CNRM-CM6-1,CNRM-ESM2-1,GISS_E2-1-H,CESM2-WACCM,CESM2,CanESM5,IPSL-CM6A-LR,MRI-ESM2-0,MPI-ESM1-2-HR,GFDL-CM4,GFDL-ESM4,UKESM1-0-LL} #ACCESS-CM2,ACCESS-ESM1-5} #,
+#for mod in {CESM2,MRI-ESM2-0} #ACCESS-CM2,ACCESS-ESM1-5} #,
+do
+echo $mod
+echo "historical"
+cdo yearmean $outputpath/$mod/tas_Amon_"$mod"_historical.nc $outputpath/$mod/tas_Amon_"$mod"_historical_ymean.nc
+cdo sellonlatbox,0,360,-90,-60 $outputpath/$mod/tas_Amon_"$mod"_historical_ymean.nc $outputpath/$mod/tas_Amon_"$mod"_historical_ymean_southof60.nc
+cdo fldmean $outputpath/$mod/tas_Amon_"$mod"_historical_ymean_southof60.nc $outputpath/$mod/tas_Amon_"$mod"_historical_ymean_fldmeansouthof60.nc
+\rm $outputpath/$mod/tas_Amon_"$mod"_historical_ymean_southof60.nc
+\rm $outputpath/$mod/tas_Amon_"$mod"_historical_ymean.nc
+
+
+for scen in {ssp126,ssp245,ssp585}
+do
+echo $scen
+cdo yearmean $outputpath/$mod/tas_Amon_"$mod"_"$scen".nc $outputpath/$mod/tas_Amon_"$mod"_"$scen"_ymean.nc
+cdo sellonlatbox,0,360,-90,-60 $outputpath/$mod/tas_Amon_"$mod"_"$scen"_ymean.nc $outputpath/$mod/tas_Amon_"$mod"_"$scen"_ymean_southof60.nc
+cdo fldmean $outputpath/$mod/tas_Amon_"$mod"_"$scen"_ymean_southof60.nc $outputpath/$mod/tas_Amon_"$mod"_"$scen"_ymean_fldmeansouthof60.nc
+\rm $outputpath/$mod/tas_Amon_"$mod"_"$scen"_ymean_southof60.nc
+\rm $outputpath/$mod/tas_Amon_"$mod"_"$scen"_ymean.nc
+done
+done
+
