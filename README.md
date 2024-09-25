@@ -9,7 +9,7 @@ Information
 
 Hello! These are the scripts used for the paper on ice-shelf viability.
 
-I will prepare a cleaner repository upon acceptance. In the meantime, here is the important information:
+This folder contains all scripts that were used for the data preparation, formatting and the final figures and analysis. You'll find associated data here: https://doi.org/10.5281/zenodo.13768759. For a cleaner repository, only having the final scripts listed below, you can also check out this repository: https://github.com/ClimateClara/scripts_for_review.
 
 - Figure 2 was done with ``/notebooks/analysis/timeseries_nb_viable_isf_withoutGISS_withhydrofrac.ipynb`` and ``/notebooks/analysis/2D_subplots_viability_proba_withoutGISS.ipynb``
 - Figure 3 was done with ``/notebooks/analysis/2D_subplots_viability_proba_withoutGISS.ipynb``
