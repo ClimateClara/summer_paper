@@ -4,7 +4,7 @@ import pandas as pd
 import summer_paper.data_formatting_NN as dfmt
 from tqdm.notebook import tqdm
 from tensorflow import keras
-from mutimelt.constants import *
+from multimelt.constants import *
 
 
 def identify_nemo_run_from_tblock(tblock):
